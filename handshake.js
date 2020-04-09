@@ -25,7 +25,6 @@ function setup() {
   intersecting = false;
   textAlign(CENTER, CENTER);
   fill(255);
-  stroke(255);
 }
 
 function draw() {
@@ -36,9 +35,8 @@ function draw() {
     //sound.play();
     bubble1.changeImage();
     intersecting = true;
-    textSize(20);
+    textSize(50);
     fill(255);
-    stroke(255);
     text('Hold!', width/2, height/2);
     cursor();
     startTimer();
@@ -133,8 +131,6 @@ class Bubble {
   }
 
   show() {
-    stroke(255);
-    strokeWeight(4);
     fill(this.brightness, 125);
     if (this.image == 1){
     image(img1, this.x, this.y, 200, 150);
